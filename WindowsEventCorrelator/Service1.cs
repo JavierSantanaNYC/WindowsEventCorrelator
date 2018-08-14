@@ -8,13 +8,19 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace WindowsEventCorrelator
 {
-    public partial class Service1 : ServiceBase
+    public partial class WindowsEventCorrelator : ServiceBase
     {
-        public Service1()
+
+        public WindowsEventCorrelator()
         {
             InitializeComponent();
+            eventLog1 = new EventLog("Application");
+            
+            fileSystemWatcher1 = new System.IO.FileSystemWatcher(@"C:\Windows", "*.sys");
+            
         }
 
         protected override void OnStart(string[] args)
