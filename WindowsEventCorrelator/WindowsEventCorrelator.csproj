@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DbServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ApplicationData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoreComponents\CoreComponents.csproj">
+      <Project>{e78bdf00-8140-436c-9878-7cfed3a20b42}</Project>
+      <Name>CoreComponents</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
